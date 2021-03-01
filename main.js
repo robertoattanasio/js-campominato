@@ -34,15 +34,15 @@ console.log(numeriComputer);
 
 for (i = 1; i <= numeriComputer.length; i++) {
     // INSERIMENTO TRAMITE PROMPT 
-    var numeroInserito = parseInt(prompt('dammi un numero'));
+    var numeroInserito = parseInt(prompt('Dimmi un numero.'));
 
     // STATE DI CONTROLLO DEI VALORI IN INGRESSO E POSSIBILE USCITA DAL LOOP 
     if (((numeroInserito < 0)) || (numeroInserito > 100) || (isNaN(numeroInserito))) {
-        alert('Smettila, ti ho chiesto un numero da zero a cento!');
+        alert('Smettila, ti ho chiesto un numero da zero a cento! Ricominciamo...');
         break;
     }
     if (numeriUtente.includes(numeroInserito)) {
-        alert('Non fare il furbetto, non vale scrivere lo stesso numero!');
+        alert('Non fare il furbetto, non vale scrivere lo stesso numero! Ricomincia da capo e sii onesto.');
         break;
     }
 
@@ -58,6 +58,6 @@ for (i = 1; i <= numeriComputer.length; i++) {
 
     // STATO FINALE IN CASO DI VITTORIA
     if (i == numeriComputer.length) {
-        alert('complimenti, hai vinto tu.')
+        alert('Complimenti, hai vinto tu. Hai superato ' + numeriComputer.length + ' livelli!')
     }
 }
