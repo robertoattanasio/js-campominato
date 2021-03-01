@@ -1,6 +1,6 @@
 var numeriComputer = [];
 var numeriUtente = [];
-var difficolta = parseInt(prompt('Definisci una difficoltà dandomi un numero tra 1, 2 o 3.'));
+var difficolta = parseInt(prompt('Definisci una difficoltà dandomi un numero tra 1 (numeri da 0 a 100), 2 (numeri tra 0 e 80) o 3 (numeri tra 0 50).'));
 var livello = 0;
 
 switch (difficolta) {
@@ -37,8 +37,8 @@ for (i = 1; i <= numeriComputer.length; i++) {
     var numeroInserito = parseInt(prompt('Dimmi un numero.'));
 
     // STATE DI CONTROLLO DEI VALORI IN INGRESSO E POSSIBILE USCITA DAL LOOP 
-    if (((numeroInserito < 0)) || (numeroInserito > 100) || (isNaN(numeroInserito))) {
-        alert('Smettila, ti ho chiesto un numero da zero a cento! Ricominciamo...');
+    if (((numeroInserito < 0)) || (numeroInserito > livello) || (isNaN(numeroInserito))) {
+        alert('Hai inserito un numero fuori dal range consentito dal tuo livello. Ricominciamo...');
         break;
     }
     if (numeriUtente.includes(numeroInserito)) {
