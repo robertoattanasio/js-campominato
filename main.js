@@ -1,9 +1,9 @@
 var numeriComputer = [];
 var numeriUtente = [];
-var difficolta = parseInt(prompt('Definisci una difficoltà dandomi un numero tra 1 (numeri da 0 a 100), 2 (numeri tra 0 e 80) o 3 (numeri tra 0 50).'));
+var sceltaDifficolta = parseInt(prompt('Definisci una difficoltà dandomi un numero tra 1 (numeri da 0 a 100), 2 (numeri tra 0 e 80) o 3 (numeri tra 0 e 50).'));
 var livello = 0;
 
-switch (difficolta) {
+switch (sceltaDifficolta) {
     case 1:
         livello = 100;
         break;
@@ -15,18 +15,18 @@ switch (difficolta) {
         break;
     default:
         alert('Hai inserito un livello errato, per questo giocherai al massimo della difficoltà.')
-        livello = 100;
+        livello = 50;
 }
 
 
 for (i = 0; i < 16; i++) {
-    var generateNumber = Math.floor((Math.random() * livello));
+    var generateNumber = randomNumber(livello);
     // STATE INTERMEDIO PER EVITARE DUPLICATI
     if (numeriComputer.includes(generateNumber)) {
         i -= 1;
     } else {
         // PUSH NELL'ARRAY
-        numeriComputer.push(parseInt(generateNumber));
+        numeriComputer.push(generateNumber);
     }
 }
 
@@ -46,8 +46,8 @@ for (i = 1; i <= numeriComputer.length; i++) {
         break;
     }
 
-    numeriUtente.push(parseInt(numeroInserito));
-    console.log(numeriUtente);
+    numeriUtente.push(numeroInserito);
+    // console.log(numeriUtente);
 
 
     // STATO DI SCONFITTA
@@ -60,4 +60,10 @@ for (i = 1; i <= numeriComputer.length; i++) {
     if (i == numeriComputer.length) {
         alert('Complimenti, hai vinto tu. Hai superato ' + numeriComputer.length + ' livelli!')
     }
+}
+
+
+// FUNZIONE PER GENERATE NUMBER, LIVELLO COME ARGOMENTO
+function randomNumber(number) {
+    return parseInt(Math.floor((Math.random() * number)));
 }
