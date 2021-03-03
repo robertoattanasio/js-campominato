@@ -6,56 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=DotGothic16&display=swap" rel="stylesheet">
+
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>PSEUDO CAMPO MINATO</title>
 </head>
 
 <body>
     <div class="main_wrapper">
-        <h1>PSEUDO CAMPO MINATO</h1>
-        <button id="startGame">Gioca</button>
+
         <div class="container">
-            <div class="istructions">
-                <h3>Istruzioni:</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, iusto ipsum nisi ad recusandae exercitationem rerum obcaecati, animi mollitia quae aliquid voluptatibus perferendis nemo placeat deleniti. Neque nam dicta rem?</p>
-                <select id="difficolta">
-                    <option value="facile">Facile</option>
-                    <option value="medio">Medio</option>
-                    <option value="difficile">Difficile</option>
-                  </select>
+            <div class="infos">
+                <div class="istructions">
+                    <h1>PSEUDO CAMPO MINATO</h1>
+                    <p>Non appena premerai il bottone "gioca", il computer genererà sedici numeri casuali in base al livello di difficoltà. Lo scopo del gioco sarà inserire altrettanti sedici numeri che non siano uguali a quelli nascosti nella tavola.</p>
+
+                    <div class="playFunctions">
+                        <select id="difficolta">
+                            <option value="facile">Facile / da 0 a 100</option>
+                            <option value="medio">Medio / da 0 a 80</option>
+                            <option value="difficile">Difficile / da 0 a 50</option>
+                        </select>
+                        <button id="startGame">Gioca</button>
+                        <input id="numberGame" type="number" min="0" max="100" placeholder="Inserisci qui il tuo numero">
+                        <button id="numberSend">Invia Numero</button>
+                    </div>
+                    <div class="results">
+                        <p id="risultatiFinali"></p>
+                    </div>
+                </div>
             </div>
+
             <div class="game_box">
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
-                <div class="gameItem"></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
+                <div class="gameItem"><i class="fas fa-question-circle"></i></div>
             </div>
-            <div class="results">
-                <h3>Risultati</h3>
-                <p id="results"></p>
-            </div>
+
+
 
         </div>
     </div>
 
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

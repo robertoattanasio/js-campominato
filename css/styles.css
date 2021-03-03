@@ -1,0 +1,148 @@
+/* INIT */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+}
+
+
+/* CLASSI MODULARI */
+
+.violet {
+    background-color: #e7d6fa;
+}
+
+h1 {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+
+/* MAIN */
+
+.main_wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.playFunctions {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.playFunctions select {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 5px;
+    outline: transparent;
+    background-color: #d6faf9;
+    border: 1px solid #e7d6fa;
+    border-radius: 2px;
+    transition: 200ms;
+}
+
+#numberGame {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 5px;
+    outline: transparent;
+    background-color: #d6faf9;
+    border: 1px solid #e7d6fa;
+    border-radius: 2px;
+    transition: 200ms;
+    -webkit-appearance: none;
+}
+
+#numberGame::-webkit-outer-spin-button,
+#numberGame::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.playFunctions button {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    margin: 10px 0;
+    outline: transparent;
+    background-color: #d6faf9;
+    border: 1px solid #e7d6fa;
+    border-radius: 2px;
+    transition: 200ms;
+}
+
+.playFunctions button:hover {
+    background-color: #e7d6fa;
+    cursor: pointer;
+}
+
+.game_box {
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row wrap;
+    width: 500px;
+    height: 500px;
+    margin: 0 50px;
+    background-color: gray;
+    box-shadow: 0px 0px 2px #e7d6fa;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.infos {
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row wrap;
+    width: 500px;
+    margin: 0 50px;
+    box-shadow: 0px 0px 2px #e7d6fa;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid #e7d6fa;
+    padding: 20px;
+}
+
+.gameItem {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 4);
+    height: calc(100% / 4);
+    border: 1px solid #e7d6fa;
+}
+
+#risultatiFinali {
+    font-family: 'DotGothic16', sans-serif;
+    text-transform: uppercase;
+}
